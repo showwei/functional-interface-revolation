@@ -1,6 +1,7 @@
-# functional-interface-revolation
-For the java 11sample
-
+functional-interface-revolation
+===============================
+For the java 11 sample
+-----------------------
 
 .. code-block:: sh
 
