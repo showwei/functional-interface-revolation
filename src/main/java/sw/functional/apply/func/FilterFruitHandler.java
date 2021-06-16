@@ -4,6 +4,7 @@ import sw.functional.model.Fruit;
 
 import java.text.MessageFormat;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class FilterFruitHandler {
@@ -23,11 +24,22 @@ public class FilterFruitHandler {
         return fruit;
     }
 
+    public Fruit modifyTheCommissionRate(Fruit fruit ,double valueToBeOperated, Function<Double,Double> function) {
+        fruit.setCommissionRate(function.apply(valueToBeOperated));
+        return fruit;
+    }
+
     public void printFee(Fruit fruit){
 
         Double newFee = fruit.getBaseFee() - ((fruit.getBaseFee() * fruit.getFeeDiscount()) / 100);
 
         System.out.println(MessageFormat.format("The {0} color is {1} and fee after discount: {2} " ,new Object[]{fruit.getName(),fruit.getColor(),newFee}));
 
+    }
+
+    public void printAfterCommissionRate(Fruit fruit) {
+        Double newBaseFee = fruit.getBaseFee() - ((fruit.getBaseFee() * fruit.getFeeDiscount()) / 100);
+        Double newPrice = fruit.getPrice() - (fruit.getPrice() * fruit.getCommissionRate());
+        System.out.println(MessageFormat.format("The {0} sell price is {1}",fruit.getName(),(newBaseFee+newPrice)));
     }
 }

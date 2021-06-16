@@ -11,6 +11,7 @@ public class Fruit {
 
     Double baseFee = 5000.0D;
 
+    Double commissionRate = 0.0D;
 
     public Fruit(String color, String name, Double price) {
         this.color = color;
@@ -56,5 +57,13 @@ public class Fruit {
 
     public void setBaseFee(Double baseFee) {
         this.baseFee = baseFee;
+    }
+
+    public Double getCommissionRate() {
+        return commissionRate;
+    }
+
+    public void setCommissionRate(Double commissionRate) {
+        this.commissionRate = commissionRate;
     }
 }
