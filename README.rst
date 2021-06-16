@@ -5,5 +5,6 @@ For the java 11 sample
 
 .. code-block:: sh
 
-   Predicate
-   Consumer
+   Predicate -> test
+   Consumer -> accept
+   Function -> apply
