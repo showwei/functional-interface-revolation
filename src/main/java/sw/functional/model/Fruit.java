@@ -13,6 +13,8 @@ public class Fruit {
 
     Double commissionRate = 0.0D;
 
+    String freebieGiveaway = "";
+
     public Fruit(String color, String name, Double price) {
         this.color = color;
         this.name = name;
@@ -65,5 +67,13 @@ public class Fruit {
 
     public void setCommissionRate(Double commissionRate) {
         this.commissionRate = commissionRate;
+    }
+
+    public String getFreebieGiveaway() {
+        return freebieGiveaway;
+    }
+
+    public void setFreebieGiveaway(String freebieGiveaway) {
+        this.freebieGiveaway = freebieGiveaway;
     }
 }
